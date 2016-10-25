@@ -3,6 +3,9 @@
   <% @garments.each do |garment| %>
     <li>
       <%= link_to garment.name.capitalize, garment_path(garment) %>
+      <%= link_to 'Edit', edit_garment_path(garment) %>
+      <%= link_to 'Delete', garment_path(garment), method: :delete, data: {confirm: 'Are You Sure?'} %>
+      <%= link_to 'Show', garment_path(garment) %>
     </li>
 
   <% end %>
