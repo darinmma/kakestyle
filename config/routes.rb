@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'garments/:id' => 'garments#show', as: :garment
   get 'garments/:id/edit' => 'garments#edit', as: :edit_garment
   patch 'garments/:id' => 'garments#update'
+  put 'garments/:id' => 'garments#update'
   delete 'garments/:id' => 'garments#destroy'
 
 
